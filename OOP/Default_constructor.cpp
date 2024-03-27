@@ -9,7 +9,7 @@ class Addition{
     //here, Addition is a constructor;
     cin>> a>> b;
     c = a+b;
-    cout<<"the result is : "<<c;
+    cout<<"Default Constructor : "<<c;
     }
 };
 
