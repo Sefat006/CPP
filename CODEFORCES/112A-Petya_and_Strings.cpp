@@ -1,18 +1,37 @@
 #include<iostream>
-#include<conio.h>
-#include<string.h>
+#include<string>
 
 using namespace std;
 
 int main(){
-    char str1[100],str2[100];
-    cout<<"enter strings: ";
+    string str1,str2;
+    int i;
     cin>> str1>> str2;
 
-    int val = 0, res = 0;
-    int result = strcmp(str1,str2);
-
+    for(i=0; i<str1.size(); i++)
+    {
+        str1[i] = tolower(str1[i]);
+        str2[i] = tolower(str2[i]);
+    }
     
+    if(str1==str2){
+        cout<<"0"<<endl;
+    }
+    else{
+        for(i=0; i<str1.size(); i++){
+            if(str1[i]<str2[i]){
+                cout<<"-1"<<endl;
+                break;
+            }
+            if(str1[i]>str2[i]){
+                cout<<"1"<<endl;
+                break;
+            }
+        }
+    }
+
+
+    return 0;
 
 
 
