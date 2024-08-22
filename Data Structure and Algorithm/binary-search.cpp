@@ -1,30 +1,34 @@
 #include<iostream>
 using namespace std;
 
-int binarySearch(int arr[], int size, int key){
+int binarySearch(int arr[], int size, int value){
     int start = 0;
     int end = size - 1;
 
-    int mid = (start+end)/2;
+    // int mid = (start+end)/2;
+    int mid = start + (end-start)/2;
 
     while(start <= end)
     {
-        if((arr[mid])==key)
+        if((arr[mid])==value)
         {
             return mid;
         }
         
-        if(key > arr[mid])//go to right(mid+1)
+        //if the value/value is less than the mid
+        if(value > arr[mid])//go to right(mid+1)
         {
             start = mid + 1;
         }
+        //if the value/value is greater than the mid
         else{//go to left(mid-1)
             end = mid - 1;
         }
 
-        mid = (start+end)/2;
+        // mid = (start+end)/2;
+        mid = start + (end-start)/2;
     }
-    return -1;
+    return 0;
 }
 
 int main(){
