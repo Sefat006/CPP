@@ -2,6 +2,8 @@
 #include<vector>
 using namespace std;
 
+
+//this type of cout is only for integer numbers
 void printVec(vector<int> v){
     cout<< "output of vector v : ";
     for(int i = 0; i < v.size(); ++i){
@@ -9,6 +11,14 @@ void printVec(vector<int> v){
     }cout<<endl;
 }
 
+// for char/string
+/*
+    for( string/char c : <string/char name>)
+    {
+        cout<<c;
+    }cout<<endl;
+
+*/
 
 
 int main(){
