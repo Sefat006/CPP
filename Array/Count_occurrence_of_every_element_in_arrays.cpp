@@ -1,8 +1,10 @@
+
+
+//count occurance of every element in an array and the product of elements
+
 #include<iostream>
 #include<algorithm>
 using namespace std;
-
-
 
 int main()
 {   
