@@ -1,32 +1,37 @@
 #include<bits/stdc++.h>
 using namespace std;
+
+
+
 int main()
 {
     int t;
-    cin >> t;
+    cin>>t;
 
-    while(t--)
+    while( t-- )
     {
         long long int m,a,b,c;
         cin >> m >> a >> b >> c;
 
-        long long int cnt=0;
+        long long int count = 0;
         if(a <= m)
-            cnt+=a;
+            count += a;
         else
-            cnt+=m;
+            count += m;
 
         if(b <= m)
-            cnt+=b;
+            count += b;
         else
-            cnt+=m;
+            count += m;
 
-        long long int space = (m*2)-cnt;
+        long long int space = (m*2) - count;
         if(space >= c)
-            cnt+=c;
+            count += c;
         else
-            cnt+=space;
+            count += space;
 
-        cout << cnt << endl;
+        cout << count << endl;
     }
+
+    return 0;
 }
