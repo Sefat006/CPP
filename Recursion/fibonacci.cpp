@@ -1,10 +1,9 @@
 #include<iostream>
 using namespace std;
 
-class Solution{
-    public:
-    int fib(int n)
+int fib(int n)
     {
+        // fibonacci recursion
         if(n == 0){
             return 0;
         }
@@ -18,17 +17,13 @@ class Solution{
         return ans;
     }
 
-    
-};
-
 int main()
 {
     int n;
     cin>> n;
 
-    Solution s;
-
-    cout<< s.fib(n)<<endl;
+    int solution = fib(n);
+    cout<<solution<<endl;
 
     return 0;
 }

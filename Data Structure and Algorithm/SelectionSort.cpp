@@ -12,7 +12,7 @@ int main()
     for(int i=0; i<n; i++){
         cin>> arr[i];
     }
-    //selection sort
+    //selection sort(apna college) 
     for( int i=0; i<n-1; i++)
     {
         for(int j=i+1; j<n; j++){
