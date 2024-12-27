@@ -1,28 +1,6 @@
-
-#include <iostream>
-#include <string>
-
-using namespace std;
-
-int main()
-{
-    int n, x(0);
-    cin >> n;
-
-    string s;
-    while (n--)
-    {
-        cin >> s;
-        if (s[1] == '+')
-        {
-            ++x;
-        }
-        else
-        {
-            --x;
-        }
+ if ( n%2 == 0){
+        cout<<"CHAT WITH HER!"<<endl;
     }
-
-    cout << x << endl;
-    return 0;
-}
+    else{
+        cout<<"IGNORE HIM!"<<endl;
+    }
