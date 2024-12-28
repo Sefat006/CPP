@@ -15,11 +15,11 @@ void towerOfHanoi(int n, char beg, char aux, char end)
         3. then move the disk from end to middle(aux) tower
     */
 
-    // move the disk from beg to aux
+    // move the disk from beg to aux, mid tower = end
     towerOfHanoi(n-1, beg, end, aux);
-    //move the nth disk from beg to end;
+    //move the nth disk from beg to end;(moving to mid tower = end)
     cout<< "move disk "<< n <<" from "<<beg<<" to "<<end<<endl;
-    // move the disk from aux to end
+    // move the disk from aux to end; mid tower = beg
     towerOfHanoi( n-1, aux, beg, end);
 }
 
