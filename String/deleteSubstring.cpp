@@ -16,13 +16,16 @@ int main()
     // delete sub string
     int index = text.find(sub_string);
 
-    if( index != string::npos)
+    if( index == string::npos)
     {
-        text.erase(index, sub_string.length());
-        cout<<"modified text : "<< text<<endl;
+       cout<<"NULL"<<endl;
     }
     else{
-        cout<<"NULL"<<endl;
+        while( index != string::npos){
+            text.erase(index, sub_string.length());
+            index = text.find(sub_string, index);
+            cout<<"modified text : "<< text<<endl;
+        }
     }
 
     

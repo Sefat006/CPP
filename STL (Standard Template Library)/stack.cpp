@@ -1,6 +1,7 @@
-#include<iostream>
-#include<stack>
+#include <bits/stdc++.h>
 using namespace std;
+
+
 
 int main(){
     stack<string> s;
@@ -17,4 +18,5 @@ int main(){
     cout<< "top element after a pop : "<<s.top()<<endl;
     cout<<" Size : "<< s.size()<< endl;
 
+    return 0;
 }
