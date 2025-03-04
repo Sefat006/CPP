@@ -14,9 +14,12 @@ int main()
     getline(cin, sub_string);
 
     // delete sub string
-    int index = text.find(sub_string);
+    int index = text.find(sub_string); // finds the index of the substring on string(text);
 
-    if( index == string::npos)
+    // if the substring is not present on string
+    // if the index(substring search) runs from start of the string to nth position(npos) of the string
+    // means the sun string is not found thats why it has run from starting to ending of the string
+    if( index == string::npos) 
     {
        cout<<"NULL"<<endl;
     }
