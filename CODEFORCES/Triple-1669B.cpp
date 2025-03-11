@@ -7,9 +7,7 @@ void triple(int a[], int n)
 
     for( int i=0; i<n; i++)
     {
-        // counts how many time a number present in an array
-        // arr[i] = key; count[arr[i]] = value of key;
-        count[a[i]]++; 
+        count[a[i]]++;
 
         if( count[a[i]] == 3){
             cout<<a[i]<<endl;

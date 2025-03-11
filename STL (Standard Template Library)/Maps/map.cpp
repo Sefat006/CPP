@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-map will sort the keys and print the keys in ascending order
+// map will sort the keys and print the keys in ascending order
 
 int main()
 {
