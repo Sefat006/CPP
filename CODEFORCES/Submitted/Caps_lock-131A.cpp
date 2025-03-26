@@ -11,17 +11,24 @@ or all letters except for the first one are uppercase.
 In this case we should automatically change the case of all letters. For example, the case of the letters that form words "hELLO", "HTTP", "z" should be changed.
 */
 
-bool UpperCase(string s, int n){
+void UpperCase(string &s){
+    bool upper = all_of(s.begin(), s.end(), ::isupper);
+    bool lower = islower(s[0]) && all_of(s.begin()+1, s.end(), ::isupper);
 
+    if( upper || lower ){
+        for( char &ch : s){
+            ch = isupper(ch) ? tolower(ch) : toupper(ch);
+        }
+    }
+    cout<< s<< endl;
 }
 
 int main()
 {
     string s;
     cin>> s;
-    int n = s.size();
 
-    
+    UpperCase(s);
 
     return 0;
 }
