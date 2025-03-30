@@ -7,7 +7,7 @@ using namespace std;
 bool isPrime(int n){
     
     //base case
-    if( n <= 1 )
+    if( n <= 2 )
     return false;
 
     
