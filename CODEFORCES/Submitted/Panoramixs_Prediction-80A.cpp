@@ -24,6 +24,7 @@ bool isPrime(int m){
 }
 
 bool checkPrime(int n, int m){
+    // count will start from n+1; cz n is already prime number
     for(int i=n+1; i<m; i++){
         if(isPrime(i)){
             return true;
