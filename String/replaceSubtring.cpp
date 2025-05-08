@@ -22,6 +22,7 @@ int main()
 
     // string::npos => the loop will continue until the nth position of the string
     while( pos != string::npos){
+    // STRING.REPLACE(STRING.STARTING SIZE, ENDING SIZE, 'REPLACED STRING' )
         text.replace(pos, sub_string.length(), replace_string);
         // defining the length of the replaced string
         pos = text.find(sub_string, pos + replace_string.length());
