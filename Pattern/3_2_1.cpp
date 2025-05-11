@@ -21,18 +21,18 @@ int main()
     int n;
     cin>> n;
 
-    int i = 1;
+    int i = n;
 
-    while( i <= n)
+    while( i >= 1)
     {
-        int j = 1;
+        int j = n;
 
-        while( j <= n)
+        while( j >= 1)
         {
-            cout<< n-j+1;
-            j++;
+            cout<< j;
+            j--;
         } cout<<endl;
-        i++;
+        i--;
     }
 
     return 0;

@@ -30,7 +30,7 @@ int main()
         while ( j <= n)
         {
             /* code */
-            cout<< i;
+            cout<< i; // j er moddhe i print korse
             j++;
 
         } 
