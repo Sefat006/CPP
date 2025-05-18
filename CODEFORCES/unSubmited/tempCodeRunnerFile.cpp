@@ -1,0 +1,1 @@
+if( to_string(abs(n)).length() <= 1)
