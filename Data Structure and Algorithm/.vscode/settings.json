@@ -2,5 +2,18 @@
     "C_Cpp.errorSquiggles": "enabled",
     "files.associations": {
         "iostream": "cpp"
-    }
+    },
+    "cSpell.words": [
+        "অ্যারের",
+        "আমরা",
+        "একটা",
+        "কোনো",
+        "টেকনিক",
+        "পজিশন",
+        "প্রতিটি",
+        "যেখানে",
+        "যোগফল",
+        "রাখি",
+        "রেঞ্জের"
+    ]
 }
