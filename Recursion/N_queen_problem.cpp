@@ -2,17 +2,20 @@
 using namespace std;
 
 
+// এই ফাংশনের কাজ হচ্ছে, বোর্ডে যেভাবে কুইনগুলো বসানো আছে সেটা একটা সমাধান হিসেবে ans লিস্টে রেখে দেওয়া।
 void addSolution(vector< vector<int> > &board, vector<vector<int>> &ans, int n){
-    vector<int> temp;
+    vector<int> temp; // একটা খালি ১-ডি লিস্ট নিচ্ছি, যাতে বোর্ডের অবস্থা ধরে রাখা যায়
 
-    for(int i=0; i<n; i++){
-        for(int j=0; j<n; j++){
-            temp.push_back(board[i][j]);
+    // পুরো বোর্ডটা ঘুরে ঘুরে প্রতিটি ঘর দেখে নিচ্ছি
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            temp.push_back(board[i][j]); // 2D বোর্ডের প্রতিটি ঘরের মান temp-তে একে একে রেখে দিচ্ছি
         }
     }
 
-    ans.push_back(temp);
+    ans.push_back(temp); // temp-তে থাকা সম্পূর্ণ বোর্ডের এই সঠিক কুইন বসানোর অবস্থা ans লিস্টে রেখে দিলাম
 }
+
 
 //check if it is safe to put queen on this row
 bool isSafe(int row, int col, vector<vector<int>> &board, int n){
@@ -20,6 +23,7 @@ bool isSafe(int row, int col, vector<vector<int>> &board, int n){
     int y = col;
 
     // check does same row have any queen
+    // == 1 means if there is any queen, if queen exit, then its not safe and it will change the column 1 backward (y--)
     while( y >= 0){
         if( board[x][y] == 1 ){
             return false;
@@ -40,7 +44,7 @@ bool isSafe(int row, int col, vector<vector<int>> &board, int n){
 
     x = row; y = col;
     // check for diagonal
-    while( x<0 && y>=0 ){
+    while( x<n && y>=0 ){
         if( board[x][y] == 1 ){
             return false;
             y--;
