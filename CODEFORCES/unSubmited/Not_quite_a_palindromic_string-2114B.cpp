@@ -22,7 +22,7 @@ int main()
 
         if(n==2 && freq.size()==2){
             cout<<"NO"<<endl;
-            continue;;
+            continue;
         }
         int count = 0;
         for(long long i=0; i<n/2; i++){

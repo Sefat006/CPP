@@ -1,0 +1,66 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+
+
+/*
+find the pair from 2 different array whose sum is closest to x
+
+n= 1 2 3 4 5
+m = 5 7 8 9 10
+
+x=15; 5+10=15
+
+*/
+
+void solve(int arr[], int brr[], int n, int m, int x)
+{
+    int index_1, index_2;
+    int difference = INT_MAX;
+
+    for( int i=0, j=m-1; i<n && j>=0;){
+        int sum = arr[i]+brr[j];
+        int closest = abs(sum-x);
+
+        if( closest < difference){
+            index_1 = i;
+            index_2 = j;
+            difference = closest;
+        }
+
+        if(sum > x) j--;
+        else i++;
+    }
+
+    cout<<"(" << arr[index_1]<< " "<< brr[index_2]<<") = "<< arr[index_1]+brr[index_2]<<endl;
+}
+
+
+
+int main()
+{
+    int n, m, x;
+    cin>> n;
+
+    int arr[n];
+    for(int i=0; i<n; i++){
+        cin>>arr[i];
+    }
+
+    cin>> m;
+    int brr[m];
+    for(int i=0; i<m; i++){
+        cin>>brr[i];
+    }
+
+    sort(arr, arr+n);
+    sort(brr, brr+m);
+
+    x; cout<<"\n input x "<<endl;
+    cin>>x;
+
+    solve(arr, brr, n , m, x);
+
+
+    return 0;
+}
