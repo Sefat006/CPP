@@ -1,0 +1,63 @@
+
+
+------------bitwise operator----------
+
+AND = &
+OR = |
+NOT = ~
+XOR = ^
+
+
+--------- AND ---------
+ 1+1 = 1;            a=2 ( 1 0 )
+ 0+0 = 0;            b=3 ( 1 1 )
+ 1+0 = 0;           -------------
+ 0+1 = 0;        ( a&b ) = 1 0 (2);         
+
+
+--------- OR ---------
+ 1+1 = 1;            a=2 (   1 0 )
+ 0+0 = 0;            b=4 ( 1 0 0 )
+ 1+0 = 1;           -------------
+ 0+1 = 1;        ( a|b ) = 1 1 0 (6)
+
+
+ --------- NOT ---------
+ NOT will be the opposite of the answer
+ 
+ 1+1 = 1 ~ 0;            a=2 ( 1 0 )
+ 0+0 = 0 ~ 1;            b=3 ( 1 1 )
+ 1+0 = 0 ~ 1;           -------------
+ 0+1 = 0 ~ 1;        ( a&b ) = 1 0 (2);   
+
+
+ --------- XOR ---------
+ 1+1 = 0;            a=2 (   1 0 )
+ 0+0 = 0;            b=4 ( 1 0 0 )
+ 1+0 = 1;           -------------
+ 0+1 = 1;        ( a^b ) = 1 1 0 (6)
+
+
+
+
+---------left shift--------------
+Shifts all bits to the left — multiplies the number by 2 for each shift.
+    int x = 3;      // binary: 00000011
+    int y = x << 1; // binary: 00000110 → y = 6
+
+*multiplies the number by 2 for each shift
+
+| Expression | Operation         | Result |
+| ---------- | ----------------- | ------ |
+| `4 << 1`   | 4 × 2             | 8      |
+| `4 << 2`   | 4 × 2 × 2 = 4×4   | 16     |
+
+---------right shift---------------
+Shifts all bits to the right — divides the number by 2 for each shift (ignores remainder).
+    int x = 8;      // binary: 00001000
+    int y = x >> 1; // binary: 00000100 → y = 4
+
+*divides the number by 2 for each shift (ignores remainder)
+
+| `16 >> 1`  | 16 ÷ 2            | 8      |
+| `16 >> 2`  | 16 ÷ (2*2) = 16÷4 | 4      |
