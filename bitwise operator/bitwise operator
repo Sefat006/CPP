@@ -1,5 +1,21 @@
 
 
+
+------- decimal to binary -------------
+int num = INTEGER VALUE;
+Decimal → Binary	bitset<8> VARIBALE_NAME(num); // converts the num into its binary form(not int nor string type)
+
+---------binary to decimal------------
+
+Binary → Decimal	VARIBALE_NAME.to_ulong();
+
+// step 1: take input as string
+string String_VARIABLE_NAME = "binary number";
+bitset<8/16/32/64> BINARY_VARIABLE_NAME(String_VARIABLE_NAME); //use this for safe play
+//step-2: convert into decimal using to_uslong/to_ullong()
+unsigned long decimal = binary.to_ulong(); // to_ulong() gives decimal/int
+
+
 ------------bitwise operator----------
 
 AND = &
