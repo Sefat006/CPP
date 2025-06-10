@@ -1,4 +1,4 @@
-10
-5 9 10 14 15 17 19 22 24 26
-10
-2 11 17 19 21 22 24 25 27 28
+2 || n<=2 && all_of(arr.begin(), arr.end(), [&](int x){return x==arr[0];})){
+    //     cout<< n<<endl;
+    //     return 0;
+    // }
