@@ -27,8 +27,8 @@ bool isSafe(int row, int col, vector<vector<int>> &board, int n){
     while( y >= 0){
         if( board[x][y] == 1 ){
             return false;
-            y--;
         }
+        y--;
     }
 
     x = row; y = col;
@@ -36,9 +36,9 @@ bool isSafe(int row, int col, vector<vector<int>> &board, int n){
     while( x>=0 && y>=0 ){
         if( board[x][y] == 1 ){
             return false;
-            y--;
-            x--;
         }
+        y--;
+        x--;
     }
 
 
@@ -47,9 +47,9 @@ bool isSafe(int row, int col, vector<vector<int>> &board, int n){
     while( x<n && y>=0 ){
         if( board[x][y] == 1 ){
             return false;
-            y--;
-            x++;
         }
+        y--;
+        x++;
     }
     return true;
 }
@@ -89,4 +89,28 @@ vector< vector<int> > nQueens(int n){
     solve( 0, ans, board, n);
 
     return ans;
+}
+
+
+
+int main() {
+    int n;
+    cout << "Enter number of queens: ";
+    cin >> n;
+
+    vector<vector<int>> ans = nQueens(n);
+
+    cout << "Total solutions: " << ans.size() << endl;
+
+    // printing each solution
+    for (int k = 0; k < ans.size(); k++) {
+        cout << "Solution " << k+1 << ":\n";
+        for (int i = 0; i < n*n; i++) {
+            cout << ans[k][i] << " ";
+            if ((i+1) % n == 0) cout << endl;  // break line after each row
+        }
+        cout << endl;
+    }
+
+    return 0;
 }
