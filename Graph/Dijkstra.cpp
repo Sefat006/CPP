@@ -59,7 +59,7 @@ int main(){
     int vertices, edges;
     cin >> vertices >> edges;
 
-    vector<vector<int>> vec(edges, vector<int>(3));
+    vector<vector<int>> vec(edges, vector<int>(3)); // m edges, each with u, v, w
 
     // taking input edges
     for(int i=0; i<edges; i++){
