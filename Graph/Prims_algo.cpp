@@ -2,7 +2,7 @@
 using namespace std;
 
 
-vector<pair<pair<int, int>, int>> calculatePrimsMST(int n, int m,int source, vector<pair<pair<int, int>, int>> &g)
+vector<pair<pair<int, int>, int>> calculatePrimsMST(int n, int e,int source, vector<pair<pair<int, int>, int>> &g)
 {
     unordered_map<int, list<pair<int,int>>> adj;
 
@@ -64,14 +64,14 @@ vector<pair<pair<int, int>, int>> calculatePrimsMST(int n, int m,int source, vec
 
 
 int main() {
-    int n, m;
+    int n, e;
     cout << "Enter number of nodes and edges: ";
-    cin >> n >> m;
+    cin >> n >> e;
 
     vector<pair<pair<int,int>, int>> edges;
 
     cout << "Enter edges in format (u v w):\n";
-    for(int i = 0; i < m; i++){
+    for(int i = 0; i < e; i++){
         int u, v, w;
         cin >> u >> v >> w;
         edges.push_back({{u,v}, w});
@@ -81,7 +81,7 @@ int main() {
     cout << "Enter source node: ";
     cin >> source;
 
-    vector<pair<pair<int,int>, int>> mst = calculatePrimsMST(n, m, source, edges);
+    vector<pair<pair<int,int>, int>> mst = calculatePrimsMST(n, e, source, edges);
 
     cout << "\nEdges in the Minimum Spanning Tree:\n";
     for(auto edge : mst){
