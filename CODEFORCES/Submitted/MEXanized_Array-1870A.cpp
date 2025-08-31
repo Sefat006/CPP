@@ -44,7 +44,7 @@ int main()
         //     cout<<vec[i]<<" ";
         // }cout<<endl;
 
-        cout<<"ans : "<<accumulate(vec.begin(), vec.end(), 0)<<endl;
+        cout<<accumulate(vec.begin(), vec.end(), 0)<<endl;
 
     }
 
