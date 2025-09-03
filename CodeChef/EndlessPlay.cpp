@@ -11,7 +11,14 @@ int main()
 
 
     // code
+    int x, h; cin>>x>>h;
 
+    int hour;
+    if( x-4 > 0){
+        hour = (x-4) * 24;
+    }else hour = 0;
+
+    cout<< hour+h<<endl;
 
     return 0;
 }
