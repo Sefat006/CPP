@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-// const double PI = 2 * acos(0.0);
+const double PI = 2 * acos(0.0);
 
 
 
@@ -11,16 +11,13 @@ int main()
 
 
     // code
-int n,m;cin>>n>>m;
-vector<int>v(n);
-for (int i=0; i<m; i++) {
-    cin>>v[i];
-}
+    int t;cin>>t;
 
-for (int i=0; ; i++) {
-    
-}
+    while(t--){
+        int n,m; cin>>n>>m;
 
+        cout<<m-n<<endl;
+    }
 
 
     return 0;
