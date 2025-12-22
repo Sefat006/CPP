@@ -5,10 +5,10 @@ using namespace std;
 
 int main(){
     // max heap
-    priority_queue <int> maxi;
+    priority_queue <int> maxi; // [3, 2, 1, 0], top=3
 
     // min heap
-    priority_queue <int, vector<int>, greater<int> > mini;
+    priority_queue <int, vector<int>, greater<int> > mini; // [0,1,3,4,5]. top=0
 
 
     // data push in maxi

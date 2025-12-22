@@ -11,6 +11,7 @@ bool isCircularSentence(string sentence) {
     while (iss >> word) {
         words.push_back(word);
     }
+    
     // sentence = cool loop;
     // Words = ["cool", "loop"]
     int n = words.size();
