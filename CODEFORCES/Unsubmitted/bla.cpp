@@ -1,7 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 //const double PI = 2 * acos(0.0);
-using ll = long long;
+
+
 
 int main()
 {
@@ -10,22 +11,12 @@ int main()
 
 
     // code
-    ll t; cin>>t;
-    while(t--){
-        ll a,b,n; cin>> a>> b>> n;
+    int n;
+    cin>>n;
 
-        if( a == b ) {
-            cout<<1<<endl;
-            continue;
-        }
+    int m = n/2;
 
-        if((n*b) <= a){
-            cout<<1<<endl;
-        }else{
-            cout<<2<<endl;
-        }
-        
-    }
+    
 
 
     return 0;
